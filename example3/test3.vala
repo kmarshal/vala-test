@@ -19,6 +19,14 @@ int main (string[] args) {
         builder.add_from_file ("sample.ui");
         builder.connect_signals (null);
         var window = builder.get_object ("window1") as Window;
+        
+        /*var toolbar1 = builder.get_object ("toolbar1") as Toolbar;
+        toolbar1.get_style_context ().add_class (STYLE_CLASS_PRIMARY_TOOLBAR);
+				var open_button = new ToolButton.from_stock (Stock.OPEN);
+        open_button.is_important = true;
+        toolbar1.add (open_button);*/
+        
+        
         window.show_all ();
         Gtk.main ();
     } catch (Error e) {
